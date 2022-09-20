@@ -1,0 +1,46 @@
+Antonia Iana Oliveira Lima - 496183
+DD - S6
+
+QUESTÃO 1 - 
+function imc(peso, altura) {
+    return peso / (altura * altura);
+}
+
+QUESTÂO 2 -
+function situacaoAluno(np1, np2) {
+  let media = (np1 + np2) / 2;
+  let status = "";
+
+  if (media >= 7.0) {
+    status = "Aprovado com Conceito A";
+  } else if (media < 4.0) {
+    status = "Reprovado Direto";
+  } else {
+    let nfinal = 5.0;
+
+    let nmedia = (media + nfinal) / 2;
+
+    if (nmedia >= 5.0) {
+      status = "Aprovado com Conceito B";
+    } else {
+      status = "Reprovado na Final";
+    }
+  }
+
+  return status;
+}
+
+QUESTÃO 3 - 
+function reprovados(alunos) {
+  let res = "<ul>";
+  
+  for (let i = 0; i < alunos.length; i++) {
+    if (alunos[i].ira < 7.0) {
+      res += "<li>Nome: " + alunos[i].nome + ", IRA: " + alunos[i].ira + "</li>";
+    }
+  }
+
+  res += "</ul>";
+
+  return res;
+}
